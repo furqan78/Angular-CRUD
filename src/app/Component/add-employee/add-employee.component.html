@@ -1,0 +1,36 @@
+ <!--add employee box container-->
+ <div id="addEmployee-box">
+    <!--right container-->
+    <div class="conatainer">
+        <h1>Add a employee</h1>
+        <small class="error">{{error}}</small>
+        <small class="msg">{{msg}}</small>
+        <div class="form-container">
+            <form [formGroup]='formValue'>
+                <input [class.invalid]="name?.invalid && name?.touched" type="text" formControlName="name" placeholder="Name" id="name"/>
+                <div *ngIf="name?.invalid && name?.touched">
+                     <small *ngIf="name?.errors?.required" class="none">*Name is required.</small>
+                     <small *ngIf="name?.errors?.minlength" class="none">*Name must be at least 4 character.</small>
+                     <small *ngIf="name?.errors?.forbiddenName" class="none">*Name cannot be blank.</small>
+                </div>
+                <input  [class.invalid]="email?.invalid && email?.touched" type="email" formControlName="email" placeholder="E-mail" id="email"/>
+                <div *ngIf="email?.invalid && email?.touched">
+                    <small *ngIf="email?.errors?.required" class="none">*Email is required.</small>
+                    <small *ngIf="email?.errors?.forbiddenEmail" class="none">*Please enter correct email.</small>
+               </div>
+                <input  [class.invalid]="mobile?.invalid && mobile?.touched" type="number" formControlName="mobile" placeholder="Mobile" id="mobile"/>
+                <div *ngIf="mobile?.invalid && mobile?.touched">
+                    <small *ngIf="mobile?.errors?.required" class="none">*Mobile no is required.</small>
+                    <small *ngIf="mobile?.errors?.pattern" class="none">*please enter correct mobile no.</small>
+               </div>
+                <input  [class.invalid]="salary?.invalid && salary?.touched" type="number" formControlName="salary" placeholder="Salary" id="salary"/>
+                <div *ngIf="salary?.invalid && salary?.touched">
+                    <small *ngIf="salary?.errors?.required" class="none">*Salary is required.</small>
+                    <small *ngIf="salary?.errors?.min" class="none">*Salary at least 10000.</small>
+                    <small *ngIf="salary?.errors?.forbiddenName" class="none">*Salary cannot be zero.</small>
+               </div>
+                <button [disabled]="!formValue.valid" class="addBtn" type="button" (click)="postEmpolyeeDetails()">Add</button>
+            </form>
+        </div>
+    </div>
+</div>

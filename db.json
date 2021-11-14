@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 2,
+      "name": "Rudra",
+      "email": "rudra@gmail.com",
+      "mobile": 9917954884,
+      "salary": 25000
+    },
+    {
+      "id": 3,
+      "name": "Joyston",
+      "email": "joy@gmail.com",
+      "mobile": "978784454",
+      "salary": "15000"
+    },
+    {
+      "id": 4,
+      "name": "Furqan",
+      "email": "furqan@gmail.com",
+      "mobile": "9179544270",
+      "salary": 30000
+    },
+    {
+      "id": 5,
+      "name": "Rishikesh",
+      "email": "rishikesh@gmail.com",
+      "mobile": 9179544782,
+      "salary": 20000
+    },
+    {
+      "id": 6,
+      "name": "Yash",
+      "email": "yash@gmail.com",
+      "mobile": "9575138174",
+      "salary": 50000
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

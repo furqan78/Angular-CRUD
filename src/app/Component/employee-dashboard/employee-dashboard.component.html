@@ -1,0 +1,39 @@
+<!--Navbar-->
+<nav>
+    <div class="navContainer">
+        <h1 class="hadding">Angular CRUD</h1>
+        <button class="addEmployee" routerLink="/addemployee">Add Employee</button>
+    </div>
+</nav>
+
+<p class="msg">{{msg}}</p>
+
+<!--Employee Data Table-->
+<div class="employeeTable">
+<table>
+    <thead>
+        <tr>
+            <th>Employee ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Mobile No.</th>
+            <th>Salary</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of employeeData">
+            <td>{{row.id}}</td>
+            <td>{{row.name}}</td>
+            <td>{{row.email}}</td>
+            <td>{{row.mobile}}</td>
+            <td> &#8377;{{row.salary}}</td>
+            <td>
+                <button class="editBtn" (click)="onSelect(row)">Edit</button>
+                <button (click)="deleteEmployeee(row)" class="deleteBtn" type="button">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+

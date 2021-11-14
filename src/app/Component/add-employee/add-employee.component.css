@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Jost", sans-serif;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f3f3f3;
+}
+
+#addEmployee-box {
+    position: relative;
+    margin: 5% auto;
+    width: 500px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    background: #FFF;
+    border-radius: 10px;
+    box-shadow: 0 5px 30px #ccc;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 28px;
+    margin-left: 30px;
+}
+
+.error{
+    margin-left: 30px;
+    color: red;
+}
+
+.msg{
+    margin-left: 30px;
+    color: green;
+}
+
+.form-container{
+  margin-left: 30px;
+
+}
+
+input{
+    display: block;
+    box-sizing: border-box;
+    margin-top: 15px;
+    padding: 4px;
+    width: 230px;
+    background-color: #f3f3f3;
+    height: 32px;
+    padding: 18px 15px;
+    border-radius: 10px;
+    border: 1px solid #AAA;
+    font-weight: 400;
+    font-size: 15px;
+    transition: 0.2s ease;
+    outline:none;
+}
+
+input:focus {
+        border: 1px solid olivedrab;
+        color: olivedrab;
+        transition: 0.2s ease;
+}
+
+.invalid{
+    border: 1px solid red;
+}
+.errortag{
+    display: none;
+}
+.none{
+   display: block;
+   color: red;
+   margin-left: 10px;
+   margin-top: 2px;
+}
+
+.conatainer {
+    position: relative;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 100%;
+    height: 500px;
+    border-radius: 0 2px 2px 0;
+}
+
+
+.addBtn {
+    margin-bottom: 20px;
+    width: 220px;
+    height: 36px;
+    border: none;
+    margin-top:30px;
+    border-radius: 10px;
+    color: #FFF;
+    font-weight: 500;
+    transition: 0.2s ease;
+    cursor: pointer;
+    background-color: olivedrab;
+}
+
+.addBtn:hover {
+        background-color: #fff;
+        border: 1px solid olivedrab;
+        color:olivedrab;
+}
+
+.addBtn:disabled,
+.addBtn[disabled]{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: default;
+}
+
+/* responsive css style  */
+@media (max-width: 850px) {
+
+ #addEmployee-box{
+   width: auto;
+   margin: 50px;
+   max-width: 400px;
+ }
+
+ .conatainer{
+   width: auto;
+ }
+}

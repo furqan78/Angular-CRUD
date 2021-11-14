@@ -1,0 +1,31 @@
+<!--login box container-->
+<div id="login-box">
+    <!--left container-->
+    <div class="left">
+       
+        <div class="container_left">
+            <table>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Action</th>
+            </table>
+        </div>
+    </div>
+    <!--right container-->
+    <div class="right">
+        <h1>Log In</h1>
+        <div class="form-container">
+            <span class="error" id="error"></span>
+            <form onsubmit="return false;">
+                <input type="email" name="email" id="email" placeholder="E-mail" required />
+                <input type="password" name="password" id="password" placeholder="Password"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"
+                    title="Must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters"
+                    required />
+                <input type="checkbox" onclick="password_toggle()"> Show Password<br />
+                <input type="submit" class="signin_btn" name="btnSubmit" id="btnSubmit">
+            </form>
+        </div>
+    </div>
+</div>
